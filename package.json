@@ -1,0 +1,22 @@
+{
+  "name": "genz-mail",
+  "version": "1.0.0",
+  "description": "Extension to append genz-style signoffs in gmail",
+  "main": "",
+  "dependencies": {
+    "gmail-js": "^1.0.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "deps": "npm install",
+    "stage": "mkdir dist || echo Dist already exists.",
+    "bundle": "browserify -o dist/gmailJsLoader.js src/gmailJsLoader.js && browserify -o dist/extension.js src/extension.js",
+    "build": "npm run stage && npm run bundle"
+  },
+  "keywords": [
+    "genz",
+    "mail"
+  ],
+  "author": "Mitiko <mitikodev@gmail.com>",
+  "license": ""
+}

@@ -1,0 +1,49 @@
+{
+    "name": "Gen Z email sign-offs",
+    "description": "Gen Z has been dismantling the patriarchy, and every other unreasonable convention in their way. We finally did it to emails. Although, I'd encourage you to be creative for yourself, this extension will help you out with a cool sign-off in a time of need. Slay!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [ "*://mail.google.com/*" ],
+            "js": [
+                "src/extensionInjector.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "dist/gmailJsLoader.js",
+                "dist/extension.js"
+            ],
+            "matches": ["<all_urls>"]
+        }
+    ],
+
+
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/get_started16.png",
+            "32": "/images/get_started32.png",
+            "48": "/images/get_started48.png",
+            "128": "/images/get_started128.png"
+        }
+    },
+    "icons": {
+        "16": "/images/get_started16.png",
+        "32": "/images/get_started32.png",
+        "48": "/images/get_started48.png",
+        "128": "/images/get_started128.png"
+    }
+}
