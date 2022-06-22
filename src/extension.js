@@ -12,6 +12,7 @@ const loaderId = setInterval(() => {
 
 function startExtension(gmail) {
     window.gmail = gmail;
+    // Note window._gmail is the potentially uninitiallized version but window.gmail we can work on 
 
     gmail.observe.on("load", () => {
         console.log("Gmail loaded.");

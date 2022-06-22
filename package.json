@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "deps": "npm install",
-    "stage": "mkdir dist || echo Dist already exists.",
+    "stage": "mkdir dist || (rm dist -r && mkdir dist)",
     "bundle": "browserify -o dist/gmailJsLoader.js src/gmailJsLoader.js && browserify -o dist/extension.js src/extension.js",
     "build": "npm run stage && npm run bundle"
   },

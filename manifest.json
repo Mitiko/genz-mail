@@ -3,9 +3,6 @@
     "description": "Gen Z has been dismantling the patriarchy, and every other unreasonable convention in their way. We finally did it to emails. Although, I'd encourage you to be creative for yourself, this extension will help you out with a cool sign-off in a time of need. Slay!",
     "version": "1.0",
     "manifest_version": 3,
-    "background": {
-        "service_worker": "background.js"
-    },
     "content_scripts": [
         {
             "matches": [ "*://mail.google.com/*" ],

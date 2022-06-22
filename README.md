@@ -5,6 +5,15 @@ Most email sign-offs are boring. Here's an extension to fix that for you.
 
 Representing genz, I must ask you kindly to rather be creative and think of some cool sign-offs yourself, but in case you're having a no bones day, this is a quick fix!
 
+## Build
+
+> Developer only section
+
+```bash
+npm run build # creates a dist directory
+# you need to build the project (and the dist directory) to install the extension
+```
+
 ## TODO:
 
 - Make the "Yassify" button rainbow colored
